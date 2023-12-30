@@ -1,0 +1,33 @@
+<!-- Normal Interpolation -->
+<div>
+    Interpolated Strin Value = <i> {{nameInterpolation}} </i>
+</div>
+
+
+<!-- Interpolation for simple calc-->
+<div>
+    2 + 2  = <i> {{2+2}} </i>
+</div>
+
+
+<!-- Interpolation for ternary operator-->
+<div>
+    I {{ age>18 ? "CAN VOTE TERNARY" : " CAN NOT VOTE TERNARY" }}
+</div>
+
+<!-- Interpolation for ternary operator and HTML Within -->
+<div>
+    I {{ age>18 ? "<b>CAN VOTE</b> TERNARY" : " <b>CAN NOT VOTE</b> TERNARY" }}
+</div>
+
+
+<!-- Interpolation for function -->
+<div>
+    I {{ checkAge() }}
+</div>
+
+
+<!-- Interpolation for function + HTML -->
+<div>
+    <p [innerHTML]="'I '+ checkAgeHTML()"></p>
+</div>

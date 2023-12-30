@@ -1,0 +1,41 @@
+<!-- For Loop Normal -->
+<div hidden>
+    <div  *ngFor="let item of list">
+        My Fiend Name is = {{item.name}}
+    </div>
+    <button (click)="foo()">foo</button>
+</div>
+
+<!-- For Loop Complex array -->
+<div  hidden *ngFor="let student of complexList">
+    <div style="border: 1px solid red; margin-bottom: 5px;">
+    <p> Name of Student = {{student.name}}</p>
+    <p> Class of Student = {{student.class}}</p>
+    <div *ngFor="let friend of student.friend" style="padding-left: 20px;">
+        <p> Name of Friend = {{friend}}</p>
+    </div>
+</div>
+</div>
+
+<!-- For Loop Track By  -->
+<div hidden>
+    <div  *ngFor="let item of list;trackBy: identify"> 
+        My Fiend Name is = {{item.name}}
+    </div>
+    <button (click)="foo()">foo</button>
+</div>
+
+<!-- For Loop Local Variables -->
+<div hidden>
+    <div  *ngFor="let item of list;let i=index,let c=count, let f=first, let l=last, let e=even, let o=odd;">
+        <span [class.evencolor]="e">My Fiend Name is = {{item.name}} - index={{i}}-count={{c}}-isFirst={{f}}-isLast={{l}}--isEven={{e}}-isOdd={{o}} </span>
+    </div>
+    <button (click)="foo()">foo</button>
+</div>
+
+<!-- For Loop on Object  -->
+<div>
+    <div  *ngFor="let item of objectValue| keyvalue"> 
+        key is = {{item.key}}  && value is = {{item.value}}
+    </div>
+</div>
