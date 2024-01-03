@@ -1,0 +1,16 @@
+<!-- 1) Tell property binding can be achieved using src  -->
+<!-- 2) y we required property binding  -->
+
+
+<!-- using property binding as interpolation -->
+<div style="display: flex; justify-content: space-around;">
+    <img src="{{imagescr1}}" alt="Republic Day Image" height="500" width="500">
+    <img src="{{imagescr2}}" alt="Independence Day Image" height="500" width="500">
+</div>
+
+<!-- y we required property binding   disable ,hidden,checked -->
+<div>
+    <button [disabled]="true">Click Me(Disabled Button)</button><br>
+    <button style="margin-top: 20px;" [hidden]="false">Hidden Button</button>
+    <input type="checkbox" [checked]="false">
+</div>
