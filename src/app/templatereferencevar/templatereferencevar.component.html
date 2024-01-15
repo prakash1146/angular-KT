@@ -1,0 +1,26 @@
+<!-- Two ways to use Template reference variable  -->
+
+<div>
+    <span #spanw>  i m span </span>
+    <br>
+    Way1  Name - <input type="text" #myNameVar (input)="inpueValueChangeName(myNameVar.value)">
+    <!-- Way 2 Name2 - <input type="text" ref-myNameVar (input)="inpueValueChangeName(myNameVar.value)"> -->
+    <br>  
+    Age - <input style="margin-top: 10px;" type="text" #myAgeVar (input)="inpueValueChangeAge()">  
+</div>
+
+
+<br>
+i have entered Name= {{inpNameValue}}
+
+<br>
+I have entered Age = {{inpAgeValue}}
+
+
+<!-- refVarParent will have access the property of emplaterefParent component-->
+
+<app-templateref-parent #refVarParentDiff></app-templateref-parent>
+<app-templateref-child *ngIf="refVarParentDiff.checkTemplateRefvalue" [parentComp]="refVarParentDiff"></app-templateref-child>
+
+
+<br>

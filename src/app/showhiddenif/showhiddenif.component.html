@@ -23,7 +23,7 @@
 
 
 
-<!-- Normal use of if values using variable -->
+<!-- Normal use of if values using function -->
 <div hidden>
     <div *ngIf="valBooleanAgeFunction();">
         <span>I am yet !!! NOT EXPERIENCED !!! developer.</span>
@@ -34,11 +34,39 @@
     </div>
 </div>
 
+<!-- Use of if else condition -->
+<div hidden>
+    <div *ngIf="true;else templateName">
+        I am satisfying if condition.
+    </div>
+    
+    <ng-template #templateName> 
+        I am else condition.
+    </ng-template>
+</div>
+
+<!-- Use of if then else condition -->
+<div hidden>
+    <div *ngIf="true;then templateTrue else templateName">
+        I am satisfying if condition.
+    </div>
+
+    <ng-template #templateTrue> 
+        I am in !!! TRUE !!! 
+    </ng-template>
+    
+    <ng-template #templateFalse> 
+        I am in !!! FALSE !!! 
+    </ng-template>
+</div>
+
+
 <!-- Tell abt ng if & hidden difference -->
 
 
 <!-- Switch case -->
-<input type='text' [(ngModel)]="num" />
+<div hidden>
+    <input type='text' [(ngModel)]="num" />
  
 <div [ngSwitch]="num">
   <div *ngSwitchCase="'1'">One</div>
@@ -51,4 +79,5 @@
   <!-- <div *ngSwitchDefault>This is Default1</div>
   <div *ngSwitchDefault>This is Default2</div>
   <div *ngSwitchDefault>This is Default3</div> -->
+</div>
 </div>

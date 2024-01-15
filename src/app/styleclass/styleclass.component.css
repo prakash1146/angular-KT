@@ -1,0 +1,17 @@
+.mystaticClass{
+    color: red;
+    background-color: lightgreen;
+}
+
+.dynamicClass1 {
+    font-size: 100px;
+    color: royalblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.dynamicClass2 {
+    font-size: 200px;
+    color: greenyellow;
+    font-weight: bold;
+}

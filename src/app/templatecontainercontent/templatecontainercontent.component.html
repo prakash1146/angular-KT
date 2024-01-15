@@ -1,0 +1,24 @@
+
+<ng-template #mytemplate>
+    <span> Hello I am in template </span>
+</ng-template>
+
+
+<div>
+    <h1>This is template example</h1>
+    <span *ngTemplateOutlet="mytemplate"></span>
+</div>
+
+<!-- If else case for ng template -->
+
+
+<!-- Ng container example  -->
+<ng-container ></ng-container>
+
+
+<!-- ng content example -->
+
+<app-templateref-child>
+    <span class="footer">Hello I am inside child component - Header </span><br>
+    <span class="header">Hello I am inside child component - Footer </span>
+</app-templateref-child>

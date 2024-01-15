@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ShowhiddenifComponent {
   valBooleanvariable = true;
   experience = 15 ;
-
+  num = 1;
   valBooleanAgeFunction() : boolean{
     return this.experience > 5;
   }

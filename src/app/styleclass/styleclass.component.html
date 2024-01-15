@@ -1,0 +1,16 @@
+<!-- show styles different  use , [style] , px ,priority of style over ngstyle -->
+<div>
+    <span style="background-color: lightblue;" [ngStyle]="{color: isnot?'red':'green', 'font-weight': 'bold',fontSize:'60px'}" [style.font-size.px]="100">  Hello Bro !!</span>
+    <div [style.font-size.px] = "100" > Font Size Test with px</div>
+    <div [ngStyle]="getMyStyles()">
+        NgStyle Example
+    </div>  
+</div>
+
+<!-- Show different type of use of ngclass -->
+
+<div>
+    <span class="mystaticClass" [ngClass]="{dynamicClass1 : isnot}"> I am  class</span><br>
+    <span class="mystaticClass" [ngClass]="['dynamicClass1' , 'dynamicClass2']"> I am Mixing class</span><br>
+    <span class="mystaticClass" [ngClass]="{dynamicClass1: isnot, dynamicClass2: !isnot}"> I am decision class</span>
+</div>

@@ -3,14 +3,40 @@
 
 
 <!-- using property binding as interpolation -->
-<div style="display: flex; justify-content: space-around;">
-    <img src="{{imagescr1}}" alt="Republic Day Image" height="500" width="500">
-    <img src="{{imagescr2}}" alt="Independence Day Image" height="500" width="500">
+<div hidden>
+    <div style="display: flex; justify-content: space-around;" >
+         <!-- <img src="{{imagescr1}}" alt="Republic Day Image" height="500" width="500">
+    <img src="{{imagescr2}}" alt="Independence Day Image" height="500" width="500"> -->
+    <br>
+    <img bind-src="imagescr1" alt="Republic Day Image" height="500" width="500">
+    <img [src]="imagescr2" alt="Independence Day Image" height="500" width="500">
+    </div>
+</div>
+
+<!-- using property binding as interpolation -->
+<div hidden >
+    <!-- <img src="{{imagescr1}}" alt="Republic Day Image" height="500" width="500">
+    <img src="{{imagescr2}}" alt="Independence Day Image" height="500" width="500"> -->
+    <br>
+    <img bind-src="imagescr1" alt="Republic Day Image" height="500" width="500">
+    <img [src]="imagescr2" alt="Independence Day Image" height="500" width="500">
 </div>
 
 <!-- y we required property binding   disable ,hidden,checked -->
-<div>
+<div hidden>
     <button [disabled]="true">Click Me(Disabled Button)</button><br>
     <button style="margin-top: 20px;" [hidden]="false">Hidden Button</button>
     <input type="checkbox" [checked]="false">
 </div>
+
+
+<!-- event binding -->
+<div>
+    <!-- <img bind-src="imagescr1" alt="Republic Day Image" height="500" width="500" (click)="imageRep('Rep')">
+    <img [src]="imagescr2" alt="Independence Day Image" height="500" width="500" (click)="imageInd('Ind')"> -->
+
+    <img bind-src="imagescr1" alt="Republic Day Image" height="500" width="500" on-click="imageRep('Rep')">
+    <img [src]="imagescr2" alt="Independence Day Image" height="500" width="500" on-click="imageInd('Ind')">
+</div>
+
+<!-- Show 2 way data binding -->
